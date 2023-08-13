@@ -1,3 +1,6 @@
+// lib
+import PropTypes from "prop-types";
+
 const ErrorModal = ({ errorTitle = "Error", errorMessage = "Something Went Wrong!", errorButtonText = "Close", onErrorButtonClick }) => (
   <div className="fixed inset-0 flex items-center justify-center z-50">
     <div className="fixed inset-0 bg-black opacity-50"></div>
@@ -14,5 +17,12 @@ const ErrorModal = ({ errorTitle = "Error", errorMessage = "Something Went Wrong
     </div>
   </div>
 );
+
+ErrorModal.propTypes = {
+  errorTitle: PropTypes.node,
+  errorMessage: PropTypes.node,
+  errorButtonText: PropTypes.node,
+  onErrorButtonClick: PropTypes.func,
+};
 
 export default ErrorModal;
