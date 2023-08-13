@@ -1,5 +1,19 @@
 // lib
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+
+import apiClient from "../../api/apiClient";
+
+let appId = import.meta.env.VITE_APP_ID || 1;
+
+export const getConfiguration = createAsyncThunk("configuration/getConfiguration", async () => {
+  try {
+    const response = await apiClient.get(`/configuration/${appId}/`);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+});
 
 const initialState = {
   configuration: {},
@@ -14,6 +28,24 @@ export const configurationSlice = createSlice({
     updateState: (state, action) => {
       state = action.payload;
     },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(getConfiguration.pending, (state) => {
+        state.isLoading = true;
+        state.hasError = false;
+      })
+      .addCase(getConfiguration.fulfilled, (state, action) => {
+        state.configuration = action.payload;
+        state.isLoading = false;
+        state.hasError = false;
+
+        document.documentElement.style.setProperty("--primary-color", action.payload.mainColor);
+      })
+      .addCase(getConfiguration.rejected, (state) => {
+        state.hasError = true;
+        state.isLoading = false;
+      });
   },
 });
 

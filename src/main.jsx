@@ -11,6 +11,9 @@ import App from "./App.jsx";
 import "./index.css";
 import routes from "./routes.js";
 import store from "./redux/store.js";
+import { getConfiguration } from "./redux/slices/configurationSlice.js";
+
+store.dispatch(getConfiguration());
 
 const router = createBrowserRouter(
   createRoutesFromElements(
