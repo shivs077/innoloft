@@ -1,6 +1,9 @@
 // lib
 import { useNavigate } from "react-router-dom";
 
+// components
+import Button from "../../components/button/Button";
+
 const Home = () => {
   const navigate = useNavigate();
 
@@ -13,12 +16,7 @@ const Home = () => {
       <p className="text-gray-700">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo purus at mauris fringilla, eu auctor dui feugiat.
       </p>
-      <button
-        onClick={viewProductClicked}
-        className="mt-4 self-start bg-primary hover:bg-white text-white hover:text-primary hover:border hover:border-primary font-semibold py-2 px-4 rounded"
-      >
-        View Product
-      </button>
+      <Button onClick={viewProductClicked} label="View Product" className="self-start" />
     </div>
   );
 };

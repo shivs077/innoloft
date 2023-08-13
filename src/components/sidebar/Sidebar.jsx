@@ -16,13 +16,13 @@ const Sidebar = () => {
 
       {/* Navigation */}
       <ul className="space-y-3">
-        <li className="flex items-end gap-3 py-2 hover:bg-slate-50">
+        <li className="flex items-end gap-3 py-2 hover:bg-white">
           <HomeIcon className="w-[20px]" />
           <Link to={"/"} className="flex flex-1">
             <p className="font-light text-[17px] leading-[17px]">Home</p>
           </Link>
         </li>
-        <li className="flex items-end gap-3 py-2 hover:bg-slate-50">
+        <li className="flex items-end gap-3 py-2 hover:bg-white">
           <ShoppingBagIcon className="w-[20px]" />
           <Link to={"/product"} className="flex flex-1">
             <p className="font-light text-[17px] leading-[17px]">Product</p>
