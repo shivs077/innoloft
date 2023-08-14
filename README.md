@@ -1,5 +1,9 @@
 # Innoloft
 
+## Deployment
+
+The project has been deployed and is accessible at: [https://innoloft-sigma.vercel.app/](https://innoloft-sigma.vercel.app/)
+
 ## Installation & Setup
 
 **1. Clone the repository:**
