@@ -1,8 +1,38 @@
-# React + Vite
+# Innoloft
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Installation & Setup
 
-Currently, two official plugins are available:
+1. Clone the repository:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+  git clone https://github.com/shivs077/innoloft.git
+```
+
+2. CD into project directory:
+
+```bash
+  cd innoloft/
+```
+
+3. Install dependencies:
+
+```bash
+  npm install
+```
+
+4. Create a .env & add the following environment variables
+
+```base
+  VITE_APP_ID=1
+  VITE_API_BASE_URL=https://api-test.innoloft.com
+```
+
+5. Start the project:
+
+```bash
+  npm run dev
+```
+
+## Made with React + Vite
+
+This build using React + Vite
