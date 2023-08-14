@@ -127,13 +127,10 @@ const ProductEdit = () => {
                   )}
                 />
                 {/* Form actions */}
-                <div className="mt-2 flex justify-end gap-2">
-                  <Button
-                    className="bg-white border-none hover:bg-white hover:border-none hover:text-primary text-primary"
-                    label="Cancel"
-                    onClick={handleFormCancel}
-                    disabled={isSubmitting}
-                  />
+                <div className="mt-2 flex items-center justify-end gap-3">
+                  <p className={`cursor-pointer text-primary ${isSubmitting && 'pointer-events-none opacity-50'}`} onClick={isSubmitting ? undefined : handleFormCancel}>
+                    Cancel
+                  </p>
                   <Button
                     type="submit"
                     icon={isSubmitting ? <Spinner size={4} fullscreen={false} color="white" /> : <CheckIcon className="w-[18px]" />}
