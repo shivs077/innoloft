@@ -35,4 +35,4 @@
 
 ## Made with React + Vite
 
-This product build using React + Vite
+This product is built using React + Vite
