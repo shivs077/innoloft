@@ -7,3 +7,13 @@
   color: #374151;
   background-color: #f9fafb;
 }
+
+.custom-quill-container .ql-toolbar.ql-snow,
+.custom-quill-container .ql-container.ql-snow {
+  border: none;
+}
+
+
+.custom-quill-container .ql-container.ql-snow {
+  font-size:  1rem;
+}

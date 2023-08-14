@@ -23,7 +23,7 @@ import Button from "../../components/button/Button";
 const PRODUCT_ID = 6781;
 
 const Product = () => {
-  const [product, hasError] = useProduct(PRODUCT_ID);
+  const { product, hasError } = useProduct(PRODUCT_ID);
 
   const navigate = useNavigate();
 
@@ -40,7 +40,7 @@ const Product = () => {
     navigate("/product/edit");
   };
 
-  if (hasError) <ErrorModal />;
+  if (hasError) return <ErrorModal />;
 
   return (
     <div className="flex flex-1 py-6 px-2 xl:px-0 gap-4 flex-col">
@@ -77,9 +77,9 @@ const Product = () => {
               <p className="text-[18px] font-medium">Offered By</p>
               {/* personal details */}
               <div className="flex flex-col gap-2">
-                <img src={product?.company?.logo} className="w-[200px]" />
+                <img src={product?.company?.logo} className="w-full md:w-[200px]" />
                 <div className="flex items-center mb-6">
-                  <img className="w-12 h-12 lg:h-16 lg:w-16 rounded-full mr-4" src={product?.user?.profilePicture} alt="User Profile" />
+                  <img className="w-14 h-14 lg:h-16 lg:w-16 rounded-full mr-4" src={product?.user?.profilePicture} alt="User Profile" />
                   <div>
                     <p className="text-lg font-medium">{`${product?.user?.firstName}${
                       product?.user?.lastName ? " " + product?.user?.lastName : ""

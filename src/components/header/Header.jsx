@@ -34,9 +34,6 @@ const Header = () => {
               <img className="h-6 w-6 rounded-full" src={userImage} alt="User Profile" />
               <ChevronDownIcon className="w-[24px]" />
             </div>
-            <div className=" flex lg:hidden">
-              <Bars3Icon className="w-[24px] " />
-            </div>
           </div>
         </div>
       </div>
