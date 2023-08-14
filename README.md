@@ -20,7 +20,8 @@
   npm install
 ```
 
-**4. Create a .env & add the following environment variables**
+**4. Add Environment Variables:**
+Create a .env file in the project directory & add the following environment variables to it
 
 ```base
   VITE_APP_ID=1
