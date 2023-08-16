@@ -13,7 +13,7 @@ import "./App.css";
 import { configurationSelector } from "./redux/slices/configurationSlice";
 
 function App() {
-  const { configuration, isLoading, hasError } = useSelector(configurationSelector);
+  const { isLoading, hasError } = useSelector(configurationSelector);
 
   if (isLoading) return <Spinner />;
 
